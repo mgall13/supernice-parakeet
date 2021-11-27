@@ -3,8 +3,7 @@
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8' ,'9'];
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperCase = ['A', 'B', 'C!', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~'];
-
+var useSymbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~'];
 
 
 function collectData() {
@@ -39,7 +38,6 @@ function collectData() {
     return;
   }
 
-
   // Store all of the users data in a object
 
   var userData = {
@@ -52,33 +50,47 @@ function collectData() {
 
   //Return object of user's data
   return userData;
-
 }
+
 
 function generatePassword() {
   var chosenData = collectData();
-  console.log(chosenData)
+  // console.log(chosenData)
 
-var result = [];
-var allUsersOptions = [];
-var atLeastOneOfThese = [];
+  var result = [];
+  var allUsersOptions = [];
+  var atLeastOneOfThese = [];
 
-// Look up methos for .concat and .push
+  // Look up methos for .concat and .push
 
-if (chosenData.useNumber) {
+  if (chosenData.useNumber) {
   allUsersOptions = allUsersOptions.concat(numbers);
   atLeastOneOfThese.push(randomize(numbers));
+  }
+
+  else if (chosenData.upperCase) {
+  allUsersOptions = allUsersOptions.concat(upperCase);
+  atLeastOneOfThese.push(randomize(upperCase));
+  }
+
+  else if (chosenData.lowerCase) {
+  allUsersOptions = allUsersOptions.concat(lowerCase);
+  atLeastOneOfThese.push(randomize(lowerCase));
+  }
+
+  else (chosenData.useSymbols); {
+  allUsersOptions = allUsersOptions.concat(useSymbols);
+  atLeastOneOfThese.push(randomize(useSymbols));
+  }
+
+  result; 
 }
-
-
-
 // for loops to go through infor
 
-}
 
 // Creata Math.floor(Math.random) function
 function randomize(array) {
-  //write function here
+  //write 
 }
 
 
