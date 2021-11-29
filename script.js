@@ -61,6 +61,8 @@ function generatePassword() {
   var allUsersOptions = [];
   var atLeastOneOfThese = [];
 
+  hello 
+  
   // Look up methos for .concat and .push
 
   if (chosenData.useNumber) {
